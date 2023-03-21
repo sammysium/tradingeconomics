@@ -125,6 +125,10 @@ def getIndicatorData(country = None, indicators = None, output_type = None):
         linkAPI = linkAPI
     else:
         linkAPI = checkIndic(indicators, linkAPI)
+
+    if indicators and country is None:
+        linkAPI = 'https://api.tradingeconomics.com/country/all'
+        linkAPI = checkIndic(indicators, linkAPI)
     try:
         linkAPI += '?c=' + glob.apikey
     except AttributeError:
