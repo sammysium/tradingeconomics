@@ -7,4 +7,4 @@ elif country is None:
 elif indicators is None:
    linkAPI = checkCountry(country)
 else:
-   linkAPI = 'https://api.tradingeconomics.com/indicators'"
+   linkAPI = 'https://api.tradingeconomics.com/indicators'
